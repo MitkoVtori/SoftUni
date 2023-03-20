@@ -1,0 +1,30 @@
+CREATE DATABASE test
+USE DATABASE test
+CREATE TABLE test(id: int, name: str)
+ADD test VALUES (
+(1, a)
+(2, b)
+(3, c)
+(4, d)
+(5, e)
+);
+
+
+CREATE FILE test
+WRITNE IN test:
+line1
+line2
+line3
+;;;
+;;;
+WRITE IN test:
+line1
+line2
+line3
+;;;
+
+
+DEL TABLE test LINES 1 3 5
+DROP TABLE test
+DEL FILE test
+DROP DATABASE test
