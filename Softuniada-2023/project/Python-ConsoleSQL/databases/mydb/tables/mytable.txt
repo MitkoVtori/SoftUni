@@ -1,0 +1,4 @@
+{'id': 'int', 'name': 'str', 'age': 'int'}
+
+{"'id'": 1, "'name'": 'gosheto', "'age'": 17}
+{"'id'": 5, "'name'": 'dimko', "'age'": 17}

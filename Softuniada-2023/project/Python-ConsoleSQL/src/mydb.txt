@@ -1,0 +1,77 @@
+CREATE DATABASE mydb
+USE DATABASE mydb
+CREATE TABLE mytable(id: int, name: str, age: int)
+
+ADD mytable VALUES (
+(1, gosheto, 17)
+);
+
+CREATE FILE myfile
+
+WRITE IN myfile:
+Everything is alright.
+I love to write in files!
+The End of This
+;;;
+
+
+GET ALL mytable
+
+ADD mytable VALUES (
+(5, dimko, 17)
+);
+
+
+GET FILE myfile
+CREATE DATABASE DELETEABLE
+CREATE TABLE deletble(id: int)
+CREATE FILE file
+DROP DB deleteable
+DROP TABLE file
+DROP TABLE deletble
+DEL FILE file
+
+WRITE IN myfile:
+Everything is alright.
+I love to write in files!
+The End of This
+;;;
+
+
+CREATE FILE testfile
+WRITE IN testfile:
+line1
+line2
+line3
+line4
+line5
+line6
+line7
+line8
+line9
+line10
+;;;
+
+
+DEL FILE testfile LINES 1 6 8
+CREATE TABLE testtable(id: int, name: str)
+ADD testtable VALUES (
+(1, a)
+(2, b)
+(3, c)
+(4, d)
+(5, e)
+);
+
+
+DEL TABLE testtable LINES 1 3 5
+GET ALL testtable
+GET FILE testfile
+
+CREATE QUEUE resturant
+ADD TO resturant client1 client2 client3 client4 client5
+ADD TO resturant client6
+REMOVE FROM resturant
+GET resturant
+CREATE QUEUE deletble
+DEL QUEUE deletble
