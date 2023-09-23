@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load user_filters %}
+{% load comment_filters %}
+
+{% block content %}
+
+    <link rel="stylesheet" href="{% static 'styles/comments.css' %}">
+
+    {% if not comments %}
+    <p class="no-articles">No comments yet.</p>
+
+    {% else %}
+        {% for comment in comments %}
+        <div class="comment">
+            <h1 class="username">{{ comment.creator|exists }}</h1>
+            {% with comment.creator|UserModel as user %}
+            {% if user.image %}
+            <img class="img" src="../../../..{{ user.image.url }}">
+            {% else %}
+            <img class="img" src="{% static 'images/default-user.jpg' %}">
+            {% endif %}
+            {% endwith %}
+            <p class="stars">{{ comment.rating|stars }}</p>
+            <p class="comment_text">{{ comment.comment }}</p>
+            <div class="buttons">
+                {% if user.get_username == comment.creator or user.is_superuser %}
+                <a href="{% url 'edit-comment' comment.id %}" class="button-edit">🖊️</a>
+                {% endif %}
+                {% if user.get_username == comment.creator or user.is_staff or user.is_superuser %}
+                <a href="{% url 'delete-comment' comment.id %}" class="button-delete">🗑</a>
+                {% endif %}
+            </div>
+        </div>
+        {% endfor %}
+
+        <div style="text-align: center;" class="comment">
+            <h1>Comments for {{ game }}</h1>
+            <br>
+            <br>
+        </div>
+
+    {% endif %}
+
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <section id="game-details">
+        <h1>Profile Details</h1>
+        <div class="info-section">
+            <div class="game-header">
+
+                    {% if not user.image %}
+                    <img class="game-img" src="{% static 'images/default-user.jpg' %}" alt='user-image'/>
+                    {% else %}
+                    <img class="game-img" src="..{{ user.image.url }}" alt='user-image'/>
+                    {% endif %}
+
+                    {% if user.first_name and user.last_name %}
+                    <h1>{{ user.first_name }} {{ user.last_name }}</h1>
+                    {% endif %}
+
+                    <p class="text">Username: {{ user.get_username }}</p>
+
+                    <p class="text">Email: {{ user.email }}</p>
+
+                    {% if user.is_staff or user.is_superuser %}
+                    <h3 class="text">Team member</h3>
+                    {% endif %}
+
+                    {% if games %}
+                    <h3 class="text">Total games: {{ games|length }}</h3>
+                    {% endif %}
+
+                    <p>Joined: {{ user.date_joined }}</p>
+
+                <div class="buttons">
+                    <a href="{% url 'edit-user' %}" class="button">Edit</a>
+                    <a href="{% url 'logout' %}" class="button">Logout</a>
+                    <a href="{% url 'delete-user' %}" class="button">Delete</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

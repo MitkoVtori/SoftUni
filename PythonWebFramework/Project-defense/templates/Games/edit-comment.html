@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% if user.get_username != comment.creator and not user.is_superuser %}
+    <p class="no-articles">You do not have access to this page!</p>
+    {% else %}
+    <section id="register-page" class="content auth">
+        <form action="{% url 'edit-comment' comment.id %}" id="register" method="post">
+            {% csrf_token %}
+            <div class="container">
+                <h1>Edit Comment</h1>
+
+                {{ form.errors.rating }}
+                {{ form.errors.comment }}
+                <label for="id_rating">Rate game:</label>
+                {{ form.rating }}
+                {{ form.comment }}
+
+                <input class="btn submit" type="submit" value="Edit">
+            </div>
+        </form>
+    </section>
+    {% endif %}
+{% endblock %}

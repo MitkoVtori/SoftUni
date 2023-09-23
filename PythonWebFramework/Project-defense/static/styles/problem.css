@@ -1,0 +1,51 @@
+#report-problem {
+    position: relative;
+    width: 1050px;
+    height: 1200px;
+    border-radius: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    background: whitesmoke;
+    box-shadow: 14px 14px 14px #191c21, -14px -14px 20px #191c21;
+}
+
+label {
+    margin-top: 65px;
+    font-size: 35px;
+    color: #191c21;
+}
+
+select,
+#id_title,
+#id_video_image {
+    height: 65px;
+}
+
+#id_description {
+    position: relative;
+    width: 100%;
+}
+
+.btn.report {
+    margin-top: 30px;
+    background: #0DA5D8;
+    height: 100px;
+    width: 450px;
+    border-radius: 60px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    font-weight: 900;
+    box-shadow: 6px 6px 6px #cbced1, -6px -6px 6px white;
+    transition: 0.5s;
+}
+
+.btn.report:hover {
+    color: #6EFCD3;
+    background-color: #B36EFC;
+}
+
+.errorlist li {
+    color: #8512FF;
+}

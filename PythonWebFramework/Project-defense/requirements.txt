@@ -1,0 +1,72 @@
+- 10 web pages.
+
+- At least 5 class-based views. / Can be crated with Function-based and class-based views.
+
+- 5 independent models / extending, inheritance and one-to-one relation are considered as one model.
+
+- 5 forms
+
+- 5 templates
+
+- PostgreSQL DataBase service is required
+
+- login/register/logout
+
+- public part
+
+- private part / accessable only by authenticated users and admins
+
+- customized admin site / only admins
+
+- At least 5 custom options (in total) to the admin interface (e.g., filters, list display, ordering, etc.).
+
+- Unauthenticated users (public part) have only 'get' permissions, e.g., landing page, details, about page, and
+login/register 'post' permissions.
+
+- Authenticated users (private part) have full CRUD for all their created content
+
+- at least 2 groups of admins (roles) / superusers / staff / manageable from admin site / error-safe
+
+
+• Implement Exception Handling and Data Validation to avoid crashes when invalid data is entered
+(both client-side and server-side)
+o When validating data, show appropriate messages to the user
+
+
+--- Bonuses ---
+
+• Write tests (Unit & Integration) for your views/models/forms - at least 10 tests
+
+• Writing asynchronous view/s somewhere in the project - View that shows latest information without refreshing the page
+
+• Extend your Django project with REST Capabilities
+
+• Extend Django user
+
+• Host the application in a cloud environment
+
+• Additional functionality
+
+
+
+
+
+3. Assessment Criteria
+
+General Requirements – 70%
+
+• Functionality - 0…20
+• Implementing views correctly (views should only do their work) – 0...5
+• Implementing models correctly - 0…5
+• Implementing forms correctly - 0…5
+• Implementing templates correctly (using the template language) – 0…5
+• Implement Responsive Web Page Design - 0…5
+• Implementing login/register functionality correctly - 0…5
+• Exception handling and/or Data validation (validation in the models and/or the forms) – 0…5
+• Security (prevent SQL injection, XSS, CSRF, parameter tampering, etc.) – 0…5
+• Code quality (well-structured code, following the MTV pattern, following SOLID principles, etc.) – 0…10
+
+Answering Questions – 30 %
+Answer theoretical questions from all courses in SoftUni's Python program and potential functionality outside the
+scope of the project.
+

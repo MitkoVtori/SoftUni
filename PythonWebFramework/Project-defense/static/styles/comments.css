@@ -1,0 +1,46 @@
+.comment {
+    position: relative;
+    top: 50px;
+    left: 35%;
+    background: white;
+    width: 500px;
+}
+
+.username {
+    position: absolute;
+    font-size: 20px;
+    color: #338AFF;
+    top: 7px;
+    left: 50px;
+}
+
+.img {
+    width: 45px;
+    position: relative;
+    top: 5px;
+    left: 12px;
+}
+
+.stars {
+    position: absolute;
+    font-size: 14px;
+    top: 32px;
+    left: 50px;
+}
+
+.comment_text {
+    margin-top: 20px;
+}
+
+.button-edit {
+    font-size: 25px;
+    background: lightgreen;
+    border: solid black;
+}
+
+.button-delete {
+    font-size: 35px;
+    color: white;
+    background: red;
+    border: solid black;
+}

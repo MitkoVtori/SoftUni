@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <section id="register-page" class="content auth">
+        <form action="{% url 'register' %}" id="register" method="post">
+            {% csrf_token %}
+            <div class="container">
+                <div class="brand-logo"><img src="{% static 'images/super-mario.png' %}"></div>
+                <h1>Create Profile</h1>
+
+                {{ form }}
+
+                <input class="btn submit" type="submit" value="Create Profile">
+            </div>
+        </form>
+        <p style="color: #E8E5E8;"><strong>Already have an account?</strong><a style="color: #18C3E8;" href="{% url 'login' %}">Login</a></p>
+    </section>
+{% endblock %}

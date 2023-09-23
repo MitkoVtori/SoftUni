@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <!-- details section -->
+    <section id="game-details">
+        <h1>Game Details</h1>
+        <div class="info-section">
+            <div class="game-header">
+                <!-- game image -->
+                <img class="game-img"
+                     src="../../..{{ game.image.url }}"
+                     alt='game image'/>
+                <!-- title and rating -->
+                <h1>{{ game.title }} <span class="levels">Rating: {{ rating }}</span></h1>
+                <p><span class="type">Genre: {{ game.genre }}</span></p>
+            </div>
+            <p class="text">
+                {{ game.description }}
+            </p>
+            <!-- Edit/Delete buttons -->
+            <div class="buttons">
+                {% if user.get_username == game.creator or user.is_superuser %}
+                <a href="{% url 'edit-game' game.id %}" class="button">Edit</a>
+                <a href="{% url 'delete-game' game.id %}" class="button">Delete</a>
+                {% endif %}
+                <a href="{% url 'comments' game.title %}" class="button">Comments</a>
+                {% if user.get_username != game.creator %}
+                <a href="{% url 'add-comment' game.id %}" class="button">Rate</a>
+                {% endif %}
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

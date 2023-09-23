@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% if user.get_username != comment.creator and not user.is_staff and not user.is_superuser %}
+    <p class="no-articles">You do not have access to this page!</p>
+    {% else %}
+    <section id="register-page" class="content auth">
+        <form action="{% url 'delete-comment' comment.id %}" id="register" method="post">
+            {% csrf_token %}
+            <div class="container">
+                <h1>Delete comment</h1>
+
+                <input class="btn delete" style="font-size: 15px;" type="submit" value="Delete Comment">
+            </div>
+        </form>
+    </section>
+    {% endif %}
+{% endblock %}

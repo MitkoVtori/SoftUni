@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <section id="register-page" class="content auth">
+        <form action="{% url 'delete-user' %}" id="register" method="post">
+            {% csrf_token %}
+            <div class="container">
+                <h1>Are you sure you want to delete your profile?</h1>
+
+                {{ form.errors.password }}
+                {{ form.password }}
+
+                <input class="btn delete" type="submit" value="Delete Profile">
+            </div>
+        </form>
+    </section>
+{% endblock %}

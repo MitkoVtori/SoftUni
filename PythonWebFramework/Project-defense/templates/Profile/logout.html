@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section id="create-page" class="auth">
+    <div class="container">
+        <h1>Are you sure you want to log out?</h1>
+        <div id='delete'>
+            <a href="{% url 'logout-action' %}"><input class="btn submit" type="submit" value="Logout"></a>
+        </div>
+    </div>
+</section>
+{% endblock %}
