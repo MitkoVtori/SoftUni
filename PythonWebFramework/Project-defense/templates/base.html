@@ -1,0 +1,54 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}">
+    <title>GameStats</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'images/favicon.png' %}">
+</head>
+<body>
+<div id="box">
+    <header>
+
+        <h1><a class="home" href="{% url 'home' %}">Home</a></h1>
+        <nav>
+            <a href="{% url 'all-games' %}">Games</a>
+            {% if user.is_staff or user.is_superuser %}
+            <a href="{% url 'create game' %}">Add Game</a>
+            {% endif %}
+            {% if user.is_authenticated %}
+            <a href="{% url 'report-problem' %}"><u>Report Problem</u></a>
+            <a href="{% url 'problems' %}">Problems</a>
+            {% endif %}
+            {% if user.is_staff or user.is_superuser %}
+            <a href="{% url 'staff' %}">Staff</a>
+            {% endif %}
+            {% if user.is_authenticated %}
+            <a href="{% url 'user' %}"><u>Profile</u></a>
+            <a href="{% url 'logout' %}"><u>Logout</u></a>
+            {% endif %}
+            {% if user.is_staff or user.is_superuser %}
+            <a href="/admin/security/private/command/window/staff/admin/superuser/hidden/access/">Admin</a>
+            {% endif %}
+            {% if not user.is_authenticated %}
+            <p><a href="{% url 'login' %}">Login</a>/<a href="{% url 'register' %}">Register</a></p>
+            {% endif %}
+
+        </nav>
+    </header>
+
+
+    {% block content %}
+    {% endblock %}
+
+
+    <footer>
+        &copy;MitkoVtori 2023. All rights reserved.
+    </footer>
+</div>
+
+</body>
+</html>

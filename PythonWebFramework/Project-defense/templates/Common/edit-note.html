@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+    <link rel="stylesheet" href="{% static 'styles/problem.css' %}">
+
+    <section style="height: 650px;" id="report-problem" class="auth">
+        <form action="{% url 'edit-note' note.id %}" id="register" method="post">
+            {% csrf_token %}
+            <div class="container">
+
+                <label for="id_content">Note:</label>
+                {{ form.errors.content }}
+                {{ form.content }}
+
+                <input style="font-size: 45px;" class="btn report" type="submit" value="Submit">
+            </div>
+        </form>
+    </section>
+{% endblock %}

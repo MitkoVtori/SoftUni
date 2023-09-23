@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% if user.get_username != problem.creator and not user.is_staff and not user.is_superuser %}
+    <p class="no-articles">You do not have access to this page!</p>
+    {% else %}
+    <section id="register-page" class="content auth">
+        <form action="{% url 'delete-problem' problem.id %}" id="register" method="post">
+            {% csrf_token %}
+            <div class="container">
+                <input class="btn delete" style="font-size: 30px; width: 250px; height: 80px; border-radius: 450px;" type="submit" value="Delete Problem">
+            </div>
+        </form>
+    </section>
+    {% endif %}
+{% endblock %}

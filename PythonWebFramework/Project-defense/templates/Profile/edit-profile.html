@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <style>
+        .container {
+            font-size: 15px;
+        }
+
+        #image-clear_id {
+            position: relative;
+            top: 30px;
+            left: -150px;
+        }
+
+        br {
+            display: none;
+        }
+
+    </style>
+
+    <section id="register-page" class="content auth">
+        <form action="{% url 'edit-user' %}" id="register" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="container">
+                <h1>Edit Profile</h1>
+
+                {{ form }}
+
+                <input class="btn submit" type="submit" value="Submit Changes">
+            </div>
+        </form>
+        <p><a style="color: #18C3E8;" href="{% url 'change-password' %}">Change password</a></p>
+    </section>
+{% endblock %}

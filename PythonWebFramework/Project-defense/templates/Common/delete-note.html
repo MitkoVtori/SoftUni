@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+    <link rel="stylesheet" href="{% static 'styles/problem.css' %}">
+
+    <section style="height: 650px;" id="report-problem" class="auth">
+        <form action="{% url 'delete-note' note.id %}" id="register" method="post">
+            {% csrf_token %}
+            <div class="container">
+
+                {{ form }}
+
+                <input class="btn delete" type="submit" value="Delete">
+            </div>
+        </form>
+    </section>
+{% endblock %}

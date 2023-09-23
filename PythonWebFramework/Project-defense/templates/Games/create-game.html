@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <section id="create-page" class="auth">
+        <form action="{% url 'create game' %}" id="create" method="post" enctype="multipart/form-data">
+            <div class="container">
+                <h1>Create Game</h1>
+
+                {% csrf_token %}
+                <label for="id_image">Image:</label>
+                {{ form.errors.image }}
+                {{ form.image }}
+                <label for="id_title">Title:</label>
+                {{ form.errors.title }}
+                {{ form.title }}
+                <label for="id_genre">Genre:</label>
+                {{ form.errors.genre }}
+                {{ form.genre }}
+                <label for="id_description">Description:</label>
+                {{ form.errors.description }}
+                {{ form.description }}
+
+                <input class="btn submit" type="submit" value="Create Game">
+            </div>
+        </form>
+    </section>
+{% endblock %}

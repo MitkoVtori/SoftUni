@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load problem_filters %}
+
+{% block content %}
+
+    <link rel="stylesheet" href="{% static 'styles/problems.css' %}">
+
+    {% if not problems %}
+    <p class="no-articles">No problems yet.</p>
+    {% else %}
+        {% if user.is_staff or user.is_superuser %}
+        {% for problem in problems|sort %}
+        <div class="problem">
+            <h1>Type: {{ problem.problem_type }}</h1>
+            <h1>Title: {{ problem.title }}</h1>
+            <p>{{ problem.date_reported }}</p>
+            <p>{{ problem.description }}</p>
+            {% if problem.video_image %}
+            <a target="_blank" href="{{ problem.video_image }}">{{ problem.video_image }}</a>
+            {% endif %}
+            <div class="buttons">
+                {% if user.get_username == problem.creator %}
+                <a href="{% url 'edit-problem' problem.id %}" class="button-edit">🖊️</a>
+                {% endif %}
+                <a href="{% url 'delete-problem' problem.id %}" class="button-delete">🗑</a>
+            </div>
+        </div>
+        {% endfor %}
+        {% else %}
+        {% for problem in problems|sort %}
+        {% if problem.creator == user.get_username %}
+        <div class="problem">
+            <h1>Type: {{ problem.problem_type }}</h1>
+            <h1>Title: {{ problem.title }}</h1>
+            <p>{{ problem.date_reported }}</p>
+            <p>{{ problem.description }}</p>
+            {% if problem.video_image %}
+            <a target="_blank" href="{{ problem.video_image }}">{{ problem.video_image }}</a>
+            {% endif %}
+            <div class="buttons">
+                <a href="{% url 'edit-problem' problem.id %}" class="button-edit">🖊️</a>
+                <a href="{% url 'delete-problem' problem.id %}" class="button-delete">🗑</a>
+            </div>
+        </div>
+        {% endif %}
+        {% endfor %}
+        {% endif %}
+
+        <link rel="stylesheet" href="{% static 'styles/comments.css' %}">
+        <div style="text-align: center;" class="comment">
+            <h1>Problems</h1>
+            <br>
+            <br>
+        </div>
+
+    {% endif %}
+
+{% endblock %}

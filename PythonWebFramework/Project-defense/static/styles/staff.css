@@ -1,0 +1,46 @@
+.header {
+    position: fixed;
+}
+
+#form-button button {
+    position: fixed;
+    width: 250px;
+    height: 50px;
+    background: #11E05C;
+    font-size: 20px;
+    color: #2079DE;
+    border-radius: 22px;
+    border: 0px;
+    transition: all .1s ease-in-out;
+    z-index: 99px;
+}
+
+#form-button button:hover {
+    width: 255px;
+    height: 55px;
+    background: #11E05C;
+    font-size: 25px;
+    color: #2079DE;
+    border-radius: 15px;
+}
+
+.note {
+    position: relative;
+    top: 50px;
+    left: 35%;
+    background: white;
+    width: 500px;
+}
+
+.button-edit {
+    font-size: 25px;
+    background: lightgreen;
+    border: solid black;
+}
+
+.button-delete {
+    font-size: 35px;
+    color: white;
+    background: red;
+    border: solid black;
+}

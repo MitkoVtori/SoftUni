@@ -1,0 +1,23 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Articles</title>
+    <link rel="stylesheet" href="{% static 'articles.css' %}">
+</head>
+<body>
+    <h1 style="text-align: center">
+        Profiles
+    </h1>
+    {% for profile in profiles %}
+    <section>
+        <h1>{{ profile.username }}</h1>
+        <h3>{{ profile.email }}</h3>
+        <p>{{ profile.password }}</p>
+        <p>{{ article.id }}</p>
+    </section>
+    {% endfor %}
+</body>
+</html>

@@ -1,0 +1,20 @@
+.problem {
+    position: relative;
+    top: 50px;
+    left: 25%;
+    background: white;
+    width: 1000px;
+}
+
+.button-edit {
+    font-size: 25px;
+    background: lightgreen;
+    border: solid black;
+}
+
+.button-delete {
+    font-size: 35px;
+    color: white;
+    background: red;
+    border: solid black;
+}

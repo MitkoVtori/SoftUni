@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load problem_filters %}
+
+{% block content %}
+
+    <link rel="stylesheet" href="{% static 'styles/staff.css' %}">
+
+    {% if not user.is_staff and not user.is_superuser %}
+    <p class="no-articles">You do not have access to this page!</p>
+    {% else %}
+
+    <a id="form-button" href="{% url 'staff-note' %}"><button>🖊️ Add Note</button></a>
+
+        {% for note in notes|sortDate %}
+            <div class="note">
+                <h3 style="margin-left: 10px;">{{ note.date }}</h3>
+                <p>{{ note.content }}</p>
+                <div class="buttons">
+                    <a href="{% url 'edit-note' note.id %}" class="button-edit">🖊️</a>
+                    <a href="{% url 'delete-note' note.id %}" class="button-delete">🗑</a>
+                </div>
+            </div>
+        {% endfor %}
+
+        <link rel="stylesheet" href="{% static 'styles/comments.css' %}">
+        <div style="text-align: center;" class="comment">
+            <h1>Staff notes</h1>
+            <br>
+            <br>
+        </div>
+
+    {% endif %}
+
+{% endblock %}
