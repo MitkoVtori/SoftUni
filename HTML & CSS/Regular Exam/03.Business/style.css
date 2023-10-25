@@ -1,0 +1,172 @@
+@import "https://fonts.googleapis.com/css?family=PT+Serif";
+@import "https://fonts.googleapis.com/css?family=PT+Sans:400,700";
+
+html {
+    font-family: PT, sans-serif;
+}
+
+header {
+    background: url('images/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    padding-top: 25px;
+    padding-left: 35px;
+    padding-bottom: 250px;
+
+}
+
+.header-links {
+    float: right;
+    padding-top: 27px;
+    padding-right: 35px;
+}
+
+.logo {
+    width: 85px;
+}
+
+.navbar a {
+    font-family: "PT sans";
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    padding-right: 25px;
+}
+
+h1 {
+    font-family: "PT serif";
+    color: white;
+    font-size: 50px;
+    font-weight: 1;
+    padding-left: 125px;
+}
+
+.home p {
+    font-family: "PT sans";
+    color: white;
+    font-size: 20px;
+    font-weight: 1;
+    padding-left: 125px;
+    width: 670px;
+}
+
+h3 {
+    font-family: "PT serif";
+    font-size: 50px;
+    font-weight: 1;
+    color: #37282b;
+    padding-bottom: 20px;
+    margin-bottom: 0;
+}
+
+.information {
+    display: flex;
+    gap: 3.5em;
+    padding-left: 400px;
+    padding-top: 65px;
+    padding-bottom: 125px;
+    border-bottom: 3px solid #d7d7d7;
+}
+
+.business-aims p, .objectives p {
+    padding: 5px;
+    margin: 0;
+    color: #37282b;
+}
+
+.business-aims button, .objectives button {
+    background: none;
+    color: #b0825c;
+    border: 2px solid #b0825c;
+    font-size: 15px;
+    width: 170px;
+    height: 45px;
+    margin-left: 5px;
+    margin-top: 45px;
+    transform: scale(1);
+}
+
+.business-aims button:hover, .objectives button:hover {
+    transform: scale(1.2);
+}
+
+.sponsors-partners {
+    padding-bottom: 45px;
+}
+
+.sponsors, .partners {
+    text-align: center;
+}
+
+.sponsors h3, .partners h3 {
+    color: #b0825c;
+}
+
+.sponsors p, .partners p {
+    padding: 0;
+    margin: 10px;
+    color: #62492C;
+}
+
+.sponsors-images {
+    display: flex;
+    gap: 3em;
+    margin-left: 750px;
+    margin-top: 75px;
+}
+
+.sponsors-images img {
+    width: 100px;
+    padding-top: 35px;
+}
+
+.circle {
+    background: #dddddd;
+    border-radius: 50% 50% 50% 50%;
+    width: 175px;
+    height: 175px;
+}
+
+footer {
+    background: #171720;
+}
+
+.footer1 {
+    display: flex;
+    gap: 5em;
+    padding-left: 300px;
+    padding-bottom: 35px;
+    border-bottom: 1px solid #323239;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+}
+
+#mobile-apps {
+    padding-left: 95px;
+}
+
+h5 {
+    font-family: "PT serif";
+    font-size: 20px;
+    font-weight: 1;
+    color: white;
+}
+
+.footer-links a {
+    font-size: 12px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #949a97;
+    padding-bottom: 30px;
+}
+
+.footer2 {
+    padding-bottom: 3px;
+}
+
+.copyright {
+    color: #949a97;
+    padding-left: 300px;
+}

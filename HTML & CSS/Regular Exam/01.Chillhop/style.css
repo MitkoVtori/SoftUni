@@ -1,0 +1,72 @@
+html {
+    font-family: Helvetica, sans-serif;
+}
+
+.container {
+    width: 1000px;
+    padding-left: 35px;
+    padding-top: 35px;
+    background-color: #1881b6;
+    border: 3px solid black;
+    border-radius: 15px;
+    display: flex;
+    margin-left: 20%;
+    margin-top: 10%;
+}
+
+h1 {
+    color: #fdfefe;
+    font-size: 37px;
+    font-weight: 500;
+    padding-top: 10px;
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: 550;
+    text-transform: uppercase;
+}
+
+p {
+    width: 575px;
+}
+
+#text01 {
+    padding-left: 52px;
+}
+
+.buttons {
+    display: flex;
+    padding-top: 15px;
+    gap: 6.5em;
+    padding-left: 90px;
+}
+
+button {
+    font-size: 15px;
+    width: 125px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 5px;
+    transform: scale(1);
+}
+
+button:hover {
+    transform: scale(1.2);
+}
+
+#contact-sales button {
+    background: #b6416d;
+    color: white;
+}
+
+#learn-more button {
+    background: none;
+}
+
+img {
+    object-fit: cover;
+    height: 365px;
+    width: 345px;
+    padding-bottom: 25px;
+}

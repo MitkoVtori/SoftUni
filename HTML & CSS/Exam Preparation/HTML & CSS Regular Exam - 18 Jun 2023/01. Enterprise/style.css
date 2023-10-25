@@ -1,0 +1,77 @@
+@import "https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap";
+
+html {
+    font-family: 'Inter';
+    background-color: #d9d9d9;
+}
+
+.container {
+    display: flex;
+    position: fixed;
+    top: 15%;
+    left: 12%;
+}
+
+.box {
+    position: relative;
+    -webkit-box-shadow: 4px 4px 18px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 4px 4px 18px -4px rgba(0,0,0,0.75);
+    box-shadow: 4px 4px 18px -4px rgba(0,0,0,0.75);
+    width: 400px;
+    margin: 25px;
+    float: left;
+}
+
+h3, h4 {
+    margin: 0;
+    padding: 0;
+    padding-left: 15px;
+}
+
+h3 {
+    color: #595959;
+    font-size: 15px;
+    padding-top: 15px;
+}
+
+h4 {
+    font-size: 20px;
+    font-weight: 300;
+    color: #313131;
+}
+
+.text {
+    padding-bottom: 2em;
+    margin-left: 15px;
+    font-size: 15px;
+    color: #787878;
+    width: 365px;
+    border-bottom: 2px solid #6B6A6A;
+}
+
+.box-image {
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.photo {
+    float: left;
+    margin-left: 15px;
+    margin-bottom: 25px;
+    height: 50px;
+    width:  50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.name {
+    float: left;
+    margin-left: 10px;
+}
+
+.time-to-read {
+    color: #A0A0A0;
+    margin-left: 290px;
+    margin-top: 30px;
+}

@@ -1,0 +1,317 @@
+@import "https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap";
+
+html {
+    font-family: 'Inter';
+}
+
+.navbar {
+    display: flex;
+    gap: 1.7em;
+    padding-top: 30px;
+    padding-left: 165px;
+    padding-bottom: 50px;
+}
+
+.navbar a {
+    font-size: 22px;
+    color: #141314;
+    text-decoration: none;
+    transform: scale(1);
+}
+
+.navbar a:hover {
+    background-color: #ade2df;
+    transform: scale(1.2);
+}
+
+.manage-profile #login {
+    margin-left: 650px;
+}
+
+.manage-profile #login:hover {
+    background-color: #ade2df;
+    font-size: 25px;
+}
+
+.manage-profile #signup {
+    background-color: #ade2df;
+    padding: 7px;
+    border-radius: 12px;
+    margin-left: 10px;
+}
+
+.manage-profile #signup:hover {
+    background-color: #E348FF;
+    color: #0553E4;
+    font-size: 26px;
+    width: 30px;
+}
+
+.hero {
+    background-color: #ade2df;
+    text-align: center;
+    padding-bottom: 100px;
+}
+
+h1 {
+    font-size: 75px;
+    margin: 0;
+    padding: 0;
+    padding-top: 100px;
+}
+
+p {
+    margin: 0;
+    padding-top: 20px;
+    font-size: 21px;
+}
+
+.download-app {
+    padding-top: 50px;
+}
+
+.download-app a {
+    padding: 7px;
+}
+
+.download-app a button {
+    color: white;
+    background-color: #000000;
+    font-size: 25px;
+    padding: 25px;
+    border: none;
+    border-radius: 10px;
+    width: fit-content;
+    transform: scale(1);
+}
+
+.download-app a button:hover {
+    transform: scale(1.09);
+}
+
+.stats {
+    display: flex;
+    padding-left: 105px;
+    padding-top: 125px;
+    padding-bottom: 105px;
+}
+
+.box {
+    text-align: center;
+    padding: 30px;
+    border-right: 1.5px solid #C4C7CD;
+    border-left: 1.5px solid #C4C7CD;
+}
+
+h4 {
+    font-size: 55px;
+    padding: 0;
+    margin: 0;
+}
+
+.box p {
+    padding-top: 45px;
+    padding-bottom: 125px;
+}
+
+.info {
+    background-color: #ade2df;
+    display: flex;
+    padding-left: 400px;
+    gap: 7em;
+}
+
+img {
+    border: 3px dashed #C4C7CD;
+}
+
+h2 {
+    font-size: 65px;
+    padding: 0;
+    margin: 0;
+    padding-top: 110px;
+}
+
+h6 {
+    font-size: 20px;
+    padding-bottom: 5px;
+    margin-bottom: 0;
+}
+
+.text-box p {
+    font-size: 18px;
+    padding-top: 5px;
+    margin-top: 0;
+}
+
+.explore-pricing-link {
+    position: absolute;
+    color: black;
+    top: 175%;
+    left: 49%;
+    text-decoration: none;
+    padding-bottom: 5px;
+    border-bottom: 1px solid black;
+}
+
+.explore-pricing-link:hover {
+    padding-bottom: 2px;
+    left: 50%;
+}
+
+.pricing-plans {
+    background: #f3f5fa;
+    padding-bottom: 100px;
+}
+
+.pricing-plans span {
+    position: absolute;
+    top: 205%;
+    left: 45%;
+    font-weight: 500;
+    background-color: #ade2df;
+    padding: 10px;
+    border-radius: 12px;
+}
+
+h3 {
+    font-size: 45px;
+    padding: 0;
+    margin: 0;
+    margin-left: 580px;
+    padding-top: 200px;
+}
+
+.pricing-container {
+    display: flex;
+    background-color: white;
+    border: 1px solid #B2B3B5;
+    border-radius: 25px;
+    margin-top: 100px;
+}
+
+.standard-plus-premium {
+    border-right: 1px solid #ececec;
+    padding-right: 35px;
+    margin-top: 45px;
+    margin-bottom: 50px;
+}
+
+.standard-plus-premium h5 {
+    font-size: 25px;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.standard-plus-premium p {
+    font-size: 20px;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+.standard-plus-premium h2 {
+    font-size: 45px;
+    margin-left: 40px;
+    padding-top: 25px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #ececec;
+}
+
+.standard-plus-premium h2 text {
+    font-size: 20px;
+    font-weight: 350;
+}
+
+ul {
+  list-style: none;
+  padding-top: 20px;
+}
+
+ul li {
+    padding-bottom: 15px;
+    font-size: 19px;
+}
+
+ul li:before {
+  content: '✓';
+}
+
+.get-btn {
+    background-color: #ade2df;
+    border: none;
+    font-size: 20px;
+    font-weight: 545;
+    border-radius: 15px;
+    width: 305px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-left: 40px;
+    margin-top: 35px;
+    transform: scale(1)
+}
+
+.get-btn:hover {
+    transform: scale(1.2)
+}
+
+.contact-us {
+    background-color: #ade2df;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+.contact-us h5 {
+    font-size: 20px;
+    text-align: center;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.contact-us p {
+    font-size: 27px;
+    font-weight: 550;
+    padding-top: 0;
+    padding-left: 40px;
+}
+
+.contact-btn {
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    width: 90%;
+    height: 75px;
+    border: none;
+    border-radius: 15px;
+    margin-top: 232px;
+    margin-left: 40px;
+    transform: scale(1);
+}
+
+.contact-btn:hover {
+    transform: scale(1.2);
+}
+
+footer {
+    padding-bottom: 25px;
+}
+
+#copyright {
+    padding-left: 45px;
+}
+
+.logos {
+    position: absolute;
+    top: 3420px;
+    left: 1700px;
+    font-size: 18px;
+    float: right;
+    display: flex;
+    gap: 1.4em;
+    margin-right: 125px;
+}
+
+.logos span a {
+    color: black;
+}
