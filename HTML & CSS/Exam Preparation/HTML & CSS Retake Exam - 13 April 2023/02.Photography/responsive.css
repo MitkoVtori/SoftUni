@@ -1,0 +1,32 @@
+@media(max-width: 600px){
+    .home-text, .navigation-nav {
+        display: none;
+    }
+
+    .home-tab-selector-cards-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .home-image {
+        display: none;
+    }
+
+    .home-text10 {
+        padding: 0;
+        margin: 0;
+    }
+
+    .home-text11, .home-text12 {
+        padding-left: 25px;
+    }
+
+    .home-top-part, .home-links-container {
+        flex-direction: column;
+    }
+
+    .home-product-container, .home-navigate-container {
+        padding-bottom: 20px;
+    }
+
+}
